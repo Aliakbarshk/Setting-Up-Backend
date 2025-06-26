@@ -1,0 +1,1 @@
+MONGODB_URI = mongodb+srv://aliakbarsk05:ali123@cluster0.fpdlxky.mongodb.net
