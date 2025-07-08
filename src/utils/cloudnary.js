@@ -13,16 +13,21 @@ import {v2 as cloudinary} from "cloudinary"
 const uploadCloudninary = async(localFilePath)=>{
 try{
   if(!localFilePath) return null
-    const reponse = await cloudnary.uploader.upload(localFilePath, {
+    const response = await cloudinary.uploader.upload(localFilePath, {
       resource_type: "auto",
     })
   
 
 }
 catch(error){
+  fs.unlink(localFilePath)//this removes local temp files
+  return null;
   
 }
 
 
 }
 //7:30:54
+
+
+export {uploadCloudninary}
