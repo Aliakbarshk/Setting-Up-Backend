@@ -24,6 +24,11 @@ app.use(express.static("public"))
 // Example: "/style.css" will load from "public/style.css"
 app.use(cookieParser())
 
+//routes
+import userRouter from './routes/user.routes.js'
 
+
+//routes declaration
+app.use("/users",userRouter)
 
 export {app}
