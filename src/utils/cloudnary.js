@@ -18,7 +18,14 @@ try{
     })
   
 
+console.log("file is successfully Uploaded on cloudinary", 
+  response.url
+);
+  return response;
 }
+
+
+
 catch(error){
   fs.unlink(localFilePath)//this removes local temp files
   return null;
